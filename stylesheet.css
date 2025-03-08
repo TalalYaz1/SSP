@@ -1,0 +1,75 @@
+/* Center the terminal loader */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #fff; /* Optional for better contrast */
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 6.2em;
+  } /* adjust width based on content */
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+/* Enlarge the terminal loader */
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: #00b3ec;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em; /* Enlarged text */
+  padding: 3em; /* Increased padding */
+  width: 20em; /* Adjusted width */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Adjust text size and animation */
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green;
+  animation: typeAndDelete 4s steps(11) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+
+/* Optional: center title and controls */
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2em;
+  background-color: #333;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 0 1em;
+  box-sizing: border-box;
+}
+
+.terminal-title {
+  color: #eee;
+  font-size: 1.2em;
+}
