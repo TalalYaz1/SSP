@@ -1,0 +1,1 @@
+# SwiftPath Protection
