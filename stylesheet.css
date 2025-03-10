@@ -8,12 +8,14 @@ body {
   background-color: #fff; /* Optional for better contrast */
 }
 
+/* Cursor blink animation */
 @keyframes blinkCursor {
   50% {
     border-right-color: transparent;
   }
 }
 
+/* Typing and deleting animation */
 @keyframes typeAndDelete {
   0%,
   10% {
@@ -29,15 +31,17 @@ body {
   }
 }
 
-/* Enlarge the terminal loader */
+/* Responsive terminal loader */
 .terminal-loader {
   border: 0.1em solid #333;
   background-color: #1a1a1a;
   color: #00b3ec;
   font-family: "Courier New", Courier, monospace;
-  font-size: 2em; /* Enlarged text */
-  padding: 3em; /* Increased padding */
-  width: 20em; /* Adjusted width */
+  font-size: clamp(1.5em, 2vw, 2.5em); /* Dynamic font size */
+  padding: 5vw; /* Adjust padding based on screen size */
+  width: 50vw; /* Scales width with viewport */
+  max-width: 600px; /* Limit max size */
+  min-width: 300px; /* Ensure it doesn't shrink too much */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   position: relative;
@@ -45,7 +49,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Adjust text size and animation */
+/* Typing effect */
 .text {
   display: inline-block;
   white-space: nowrap;
@@ -54,9 +58,10 @@ body {
   animation: typeAndDelete 4s steps(11) infinite,
     blinkCursor 0.5s step-end infinite alternate;
   margin-top: 1.5em;
+  font-size: clamp(1em, 1.5vw, 2em); /* Text scales too */
 }
 
-/* Optional: center title and controls */
+/* Terminal header */
 .terminal-header {
   display: flex;
   justify-content: space-between;
