@@ -1,16 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>SwiftPath Protection</title>
   </head>
+  <div id="navbar"></div>
+
   <body>
-    <section class="nav-container">
-      <nav></nav>
-      <section class="hero"></section>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Protecting What Matters Most</h1>
+        <p>
+          Our intelligent security systems and trained teams provide unmatched
+          safety and peace of mind.
+        </p>
+        <a href="#cta" class="cta-button">Get Started</a>
+      </div>
+      <div class="hero-logo">
+        <img src="Assets/Logo.png" alt="Business Logo" />
+      </div>
     </section>
+    <section class="trust-signals">
+      <div class="trust-container">
+        <div class="trust-item">
+          <div class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50px"
+              height="50px"
+              viewBox="0 0 24 24"
+              fill="none">
+              <path
+                d="M11.302 21.6149C11.5234 21.744 11.6341 21.8086 11.7903 21.8421C11.9116 21.8681 12.0884 21.8681 12.2097 21.8421C12.3659 21.8086 12.4766 21.744 12.698 21.6149C14.646 20.4784 20 16.9084 20 12V6.6C20 6.04207 20 5.7631 19.8926 5.55048C19.7974 5.36198 19.6487 5.21152 19.4613 5.11409C19.25 5.00419 18.9663 5.00084 18.3988 4.99413C15.4272 4.95899 13.7136 4.71361 12 3C10.2864 4.71361 8.57279 4.95899 5.6012 4.99413C5.03373 5.00084 4.74999 5.00419 4.53865 5.11409C4.35129 5.21152 4.20259 5.36198 4.10739 5.55048C4 5.7631 4 6.04207 4 6.6V12C4 16.9084 9.35396 20.4784 11.302 21.6149Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <p>All officers SIA licensed</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M9 12L11 14L15 10M12 3L13.9101 4.87147L16.5 4.20577L17.2184 6.78155L19.7942 7.5L19.1285 10.0899L21 12L19.1285 13.9101L19.7942 16.5L17.2184 17.2184L16.5 19.7942L13.9101 19.1285L12 21L10.0899 19.1285L7.5 19.7942L6.78155 17.2184L4.20577 16.5L4.87147 13.9101L3 12L4.87147 10.0899L4.20577 7.5L6.78155 6.78155L7.5 4.20577L10.0899 4.87147L12 3Z"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </div>
+          <p>Strict vetting & training process</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon icon--filled">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="#000000"
+              version="1.1"
+              id="Layer_1"
+              width="50px"
+              height="50px"
+              viewBox="0 0 176 260"
+              enable-background="new 0 0 176 260"
+              xml:space="preserve">
+              <path
+                d="M40.265,28.336l-4.288,3.982l-0.511,5.385l3.676,6.635l4.798-0.739l-1.174-6.075L40.265,28.336z M37.126,21.65l3.139-3.267  l0.97-6.737l2.475-2.169l-2.527-3.624l-11.102,5.717l-1.76,3.445l2.909,6.533L37.126,21.65z M45.853,124.599l1.583-6.074  l-5.308,1.174l-0.715-0.74l0.689-1.021l3.318-2.424l-4.466-8.703l-1.761-4.721l-7.477-0.867l-5.052,1.148l-5.538,3.369l-4.722,2.731  l-6.022,6.558l0.23,3.062v0.026l-8.346,3.522l5.155,8.09l8.906,3.369l2.578-6.38l5.486,0.689l3.522,4.747l0.306,4.057l6.253-1.608  l3.751,2.246l3.267-4.185l5.589-3.088L45.853,124.599z M173.634,195.011l0.102-20.569l-6.814-4.211l-12.633-0.664l-5.027,5.027  l-4.696-3.037l5.333-5.308l-1.787-8.933l-5.308-6.789l-3.114-15.491l-10.259-11.739l-7.12-1.761l-0.945-3.088l-6.712-25.367  L95.183,78.841l-4.313,3.394l-0.281,0.025l-6.125-1.582l-0.918-0.281l-3.828-1.429l-1.582-1.71l1.454,1.072l9.392,0.638l5.742-9.034  l-6.967,0.281l3.445-2.858l3.854-0.536l4.772-3.19l1.557-4.696l3.522-3.904l7.401-17.763l-5.563-6.814l-11.28-0.025l-10.591-0.484  l-4.237,2.475l-3.854-9.672l12.684-10.234l2.144-3.164L89.926,2L73.567,5.522L62.389,2.128l-2.655,10.438L54.02,24.661l-5.563-0.025  L47.64,39.08l3.216,2.424l-3.42,6.329l-4.185,12.811l5.283,3.854l6.125-3.879l-5.36,11.025L47.13,81.674l3.011,8.192l3.088-3.931  l5.691-2.347l2.144-3.803l4.44,1.991l1.685,0.511l-2.297-0.204l-4.415,1.735l-0.74,4.619l4.084,4.492l0.74,1.991l-7.605,14.547  l11.332,9.06l13.271-7.503l9.06-0.23l-5.794,2.808l-4.44,10.872l6.533,11.969l7.043-1.532l-3.241,6.917l-0.715,13.321l2.986,4.466  l1.148,0.281l0.612,0.664l-2.68-0.178l-3.011,0.459l0.204,0.868l-4.849-2.833l-2.731,1.199l-8.652,1.557l-2.705,0.536l-4.849,9.775  l4.951,0.255l2.986,10.081l-4.747,7.886l-9.187,4.772l-7.146,2.271l-3.088,8.472l5.13,4.16l5.691-3.803l10.387,2.016l3.317,1.71  l2.424,2.654l3.19,3.42l7.452-0.842l1.787-1.582l5.155-1.582l2.45-1.557l2.399-1.633l-8.524,10.285l-1.251,3.343l-12.122-1.123  l-8.192,0.587l-1.148,3.956l-6.482,4.313l-0.153,3.343l-17.456,17.507l4.39,7.146l2.909-6.89l4.849-0.792l11.485-6.176l1.557,3.114  l6.074,4.16l5.232-4.721l1.735-6.89l9.213-3.267l18.043,3.931l-0.817-3.803l20.519-3.522l2.221,3.062l11.255-3.037l4.262,1.225  l15.797-4.671l8.805-6.456l0.893-7.758l-8.192,1.608l-5.742-0.995l-2.399-3.675l5.155-0.893L173.634,195.011z" />
+            </svg>
+          </div>
+          <p>UK-based management</p>
+        </div>
+        <div class="trust-item">
+          <div class="icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="50px"
+              height="50px"
+              viewBox="-2 0 20 20"
+              version="1.1">
+              <title>lightning [#1262]</title>
+              <desc>Created with Sketch.</desc>
+              <defs></defs>
+              <g
+                id="Page-1"
+                stroke="none"
+                stroke-width="2"
+                fill="none"
+                fill-rule="evenodd">
+                <g
+                  id="Dribbble-Light-Preview"
+                  transform="translate(-62.000000, -2559.000000)"
+                  fill="#000000">
+                  <g id="icons" transform="translate(56.000000, 160.000000)">
+                    <polygon
+                      id="lightning-[#1262]"
+                      points="14 2419 14 2411 6 2411 14 2399 14 2407 22 2407"></polygon>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p>Rapid response teams</p>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="services-container">
+        <!-- Manned Guarding -->
+        <div
+          class="service-card"
+          style="background-image: url(&quot;Assets/MannedGuard.png&quot;)">
+          <div class="card-content">
+            <h3>Manned Guarding</h3>
+            <p class="description">
+              Professional SIA-licensed officers delivering reliable 24/7
+              on-site protection.
+            </p>
+          </div>
+        </div>
+
+        <!-- Concierge / Front-of-House -->
+        <div
+          class="service-card"
+          style="background-image: url(&quot;Assets/Concierge.png&quot;)">
+          <div class="card-content">
+            <h3>Concierge / Front-of-House</h3>
+            <p class="description">
+              Discreet, professional personnel combining security with reception
+              services.
+            </p>
+          </div>
+        </div>
+
+        <!-- Construction Site Security -->
+        <div
+          class="service-card"
+          style="background-image: url(&quot;Assets/Construction.png&quot;)">
+          <div class="card-content">
+            <h3>Construction Site Security</h3>
+            <p class="description">
+              Safeguarding your site, equipment, and materials with trained,
+              vigilant officers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Holding & Alarm Response -->
+        <div
+          class="service-card"
+          style="background-image: url(&quot;Assets/key-holding.png&quot;)">
+          <div class="card-content">
+            <h3>Key Holding & Alarm Response</h3>
+            <p class="description">
+              Fast response to alarms and secure property monitoring, even when
+              you're off-site.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+          SwiftPath Protection is a UK-based security company providing
+          reliable, professional manned guarding and front-of-house services.
+          Our team is fully SIA-licensed, vetted, and trained to deliver
+          proactive security solutions tailored to your business needs.
+        </p>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Trusted By Our Partners</h2>
+      <div class="testimonial-container">
+        <p>
+          Client reviews coming soon. Check back here for feedback from our
+          partners<span class="dots"></span>
+        </p>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Company Info / Logo -->
+        <div class="footer-info">
+          <h3>SwiftPath Protection</h3>
+          <img src="Assets/Logo.png" alt="" />
+          <p>Professional SIA-licensed security services across the UK.</p>
+        </div>
+
+        <!-- Legal / Policy Links -->
+        <div class="footer-links">
+          <h4>Legal & Compliance</h4>
+          <ul>
+            <li>
+              <a href="Assets/Anti-Bribery-Policy.pdf" target="_blank"
+                >Anti-Bribery Policy</a
+              >
+            </li>
+            <li>
+              <a href="Assets/Insurance.pdf" target="_blank"
+                >Public Liability Document</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://find-and-update.company-information.service.gov.uk/company/15985675"
+                target="_blank"
+                >Companies House</a
+              >
+            </li>
+            <li>
+              <a href="Assets/Anti-Slavery-Policy.pdf" target="_blank"
+                >Anti-Slavery Policy</a
+              >
+            </li>
+            <li><a href="Privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 SwiftPath Protection. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
+  <!-- <script src="./js/layout.js"></script> -->
+
+  <script src="script.js"></script>
 </html>
+
+<!-- figure out why click dropdoiwn isntr working
+ -->

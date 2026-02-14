@@ -1,8 +1,5 @@
 /* Center the terminal loader */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   margin: 0;
   background-color: #fff; /* Optional for better contrast */
@@ -29,6 +26,13 @@ body {
   100% {
     width: 0;
   }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* Responsive terminal loader */
