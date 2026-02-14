@@ -107,3 +107,27 @@ cards.forEach((card) => {
     card.classList.toggle("active");
   });
 });
+
+// script.js or your existing JS file
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".service-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      // Remove active class from all other cards
+      cards.forEach((c) => {
+        if (c !== card) c.classList.remove("active");
+      });
+
+      // Toggle active on the clicked card
+      card.classList.toggle("active");
+    });
+  });
+
+  // Optional: close overlay if you click outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".service-card")) {
+      cards.forEach((c) => c.classList.remove("active"));
+    }
+  });
+});

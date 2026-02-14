@@ -463,3 +463,16 @@ body {
     margin-top: 30px;
   }
 }
+
+/* For mobile, remove hover, only use .active */
+@media (hover: none) {
+  .service-card:hover::before {
+    background: rgba(0, 0, 0, 0); /* ignore hover on touch devices */
+  }
+
+  .service-card:hover .card-content h3,
+  .service-card:hover .description {
+    opacity: initial;
+    transform: none;
+  }
+}
