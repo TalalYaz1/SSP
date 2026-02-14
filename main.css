@@ -463,3 +463,90 @@ body {
     margin-top: 30px;
   }
 }
+
+/* ------------------------ */
+/* Media Queries for Mobile */
+/* ------------------------ */
+
+/* Tablets: 900px and below */
+@media (max-width: 900px) {
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+  .hero-content,
+  .hero-logo {
+    max-width: 100%;
+  }
+  .hero-logo {
+    margin-top: 40px;
+  }
+
+  /* Trust Signals: 2x2 grid */
+  .trust-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Services Cards: shrink grid */
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* About Section: stack image and text */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Phones: 500px and below */
+@media (max-width: 500px) {
+  /* Trust Signals: 1 column */
+  .trust-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Services Cards: 1 column */
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero Section adjustments */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  /* About Section */
+  .about h2 {
+    font-size: 1.5rem;
+  }
+  .about p {
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-links ul li {
+    margin-bottom: 6px;
+  }
+}
