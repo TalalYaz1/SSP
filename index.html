@@ -1,255 +1,1067 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="stylesheet" href="style.css" />
-
+    <meta charset="utf-8" />
     <title>SwiftPath Protection</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
   </head>
-  <div id="navbar"></div>
 
   <body>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Protecting What Matters Most</h1>
-        <p>
-          Our intelligent security systems and trained teams provide unmatched
-          safety and peace of mind.
-        </p>
-        <a href="#cta" class="cta-button">Get Started</a>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status">
+        <span class="sr-only">Loading...</span>
       </div>
-      <div class="hero-logo">
-        <img src="Assets/Logo.png" alt="Business Logo" />
-      </div>
-    </section>
-    <section class="trust-signals">
-      <div class="trust-container">
-        <div class="trust-item">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="50px"
-              height="50px"
-              viewBox="0 0 24 24"
-              fill="none">
-              <path
-                d="M11.302 21.6149C11.5234 21.744 11.6341 21.8086 11.7903 21.8421C11.9116 21.8681 12.0884 21.8681 12.2097 21.8421C12.3659 21.8086 12.4766 21.744 12.698 21.6149C14.646 20.4784 20 16.9084 20 12V6.6C20 6.04207 20 5.7631 19.8926 5.55048C19.7974 5.36198 19.6487 5.21152 19.4613 5.11409C19.25 5.00419 18.9663 5.00084 18.3988 4.99413C15.4272 4.95899 13.7136 4.71361 12 3C10.2864 4.71361 8.57279 4.95899 5.6012 4.99413C5.03373 5.00084 4.74999 5.00419 4.53865 5.11409C4.35129 5.21152 4.20259 5.36198 4.10739 5.55048C4 5.7631 4 6.04207 4 6.6V12C4 16.9084 9.35396 20.4784 11.302 21.6149Z"
-                stroke="#000000"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5">
+      <div class="row gx-4 d-none d-lg-flex">
+        <div class="col-lg-6 text-start">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <div class="btn-sm-square rounded-circle bg-primary me-2">
+              <small class="fa fa-map-marker-alt text-white"></small>
+            </div>
+            <small
+              >167-169 Great Portland Street, London, England, W1W 5PF
+            </small>
           </div>
-          <p>All officers SIA licensed</p>
+          <div class="h-100 d-inline-flex align-items-center py-3">
+            <div class="btn-sm-square rounded-circle bg-primary me-2">
+              <small class="fa fa-envelope-open text-white"></small>
+            </div>
+            <small>info@swiftpath.uk</small>
+          </div>
         </div>
-        <div class="trust-item">
-          <div class="icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M9 12L11 14L15 10M12 3L13.9101 4.87147L16.5 4.20577L17.2184 6.78155L19.7942 7.5L19.1285 10.0899L21 12L19.1285 13.9101L19.7942 16.5L17.2184 17.2184L16.5 19.7942L13.9101 19.1285L12 21L10.0899 19.1285L7.5 19.7942L6.78155 17.2184L4.20577 16.5L4.87147 13.9101L3 12L4.87147 10.0899L4.20577 7.5L6.78155 6.78155L7.5 4.20577L10.0899 4.87147L12 3Z"
-                  stroke="#000000"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"></path>
-              </g>
-            </svg>
+        <div class="col-lg-6 text-end">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <div class="btn-sm-square rounded-circle bg-primary me-2">
+              <small class="fa fa-phone-alt text-white"></small>
+            </div>
+            <small>+44 7465 989610</small>
           </div>
-          <p>Strict vetting & training process</p>
-        </div>
-        <div class="trust-item">
-          <div class="icon icon--filled">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              fill="#000000"
-              version="1.1"
-              id="Layer_1"
-              width="50px"
-              height="50px"
-              viewBox="0 0 176 260"
-              enable-background="new 0 0 176 260"
-              xml:space="preserve">
-              <path
-                d="M40.265,28.336l-4.288,3.982l-0.511,5.385l3.676,6.635l4.798-0.739l-1.174-6.075L40.265,28.336z M37.126,21.65l3.139-3.267  l0.97-6.737l2.475-2.169l-2.527-3.624l-11.102,5.717l-1.76,3.445l2.909,6.533L37.126,21.65z M45.853,124.599l1.583-6.074  l-5.308,1.174l-0.715-0.74l0.689-1.021l3.318-2.424l-4.466-8.703l-1.761-4.721l-7.477-0.867l-5.052,1.148l-5.538,3.369l-4.722,2.731  l-6.022,6.558l0.23,3.062v0.026l-8.346,3.522l5.155,8.09l8.906,3.369l2.578-6.38l5.486,0.689l3.522,4.747l0.306,4.057l6.253-1.608  l3.751,2.246l3.267-4.185l5.589-3.088L45.853,124.599z M173.634,195.011l0.102-20.569l-6.814-4.211l-12.633-0.664l-5.027,5.027  l-4.696-3.037l5.333-5.308l-1.787-8.933l-5.308-6.789l-3.114-15.491l-10.259-11.739l-7.12-1.761l-0.945-3.088l-6.712-25.367  L95.183,78.841l-4.313,3.394l-0.281,0.025l-6.125-1.582l-0.918-0.281l-3.828-1.429l-1.582-1.71l1.454,1.072l9.392,0.638l5.742-9.034  l-6.967,0.281l3.445-2.858l3.854-0.536l4.772-3.19l1.557-4.696l3.522-3.904l7.401-17.763l-5.563-6.814l-11.28-0.025l-10.591-0.484  l-4.237,2.475l-3.854-9.672l12.684-10.234l2.144-3.164L89.926,2L73.567,5.522L62.389,2.128l-2.655,10.438L54.02,24.661l-5.563-0.025  L47.64,39.08l3.216,2.424l-3.42,6.329l-4.185,12.811l5.283,3.854l6.125-3.879l-5.36,11.025L47.13,81.674l3.011,8.192l3.088-3.931  l5.691-2.347l2.144-3.803l4.44,1.991l1.685,0.511l-2.297-0.204l-4.415,1.735l-0.74,4.619l4.084,4.492l0.74,1.991l-7.605,14.547  l11.332,9.06l13.271-7.503l9.06-0.23l-5.794,2.808l-4.44,10.872l6.533,11.969l7.043-1.532l-3.241,6.917l-0.715,13.321l2.986,4.466  l1.148,0.281l0.612,0.664l-2.68-0.178l-3.011,0.459l0.204,0.868l-4.849-2.833l-2.731,1.199l-8.652,1.557l-2.705,0.536l-4.849,9.775  l4.951,0.255l2.986,10.081l-4.747,7.886l-9.187,4.772l-7.146,2.271l-3.088,8.472l5.13,4.16l5.691-3.803l10.387,2.016l3.317,1.71  l2.424,2.654l3.19,3.42l7.452-0.842l1.787-1.582l5.155-1.582l2.45-1.557l2.399-1.633l-8.524,10.285l-1.251,3.343l-12.122-1.123  l-8.192,0.587l-1.148,3.956l-6.482,4.313l-0.153,3.343l-17.456,17.507l4.39,7.146l2.909-6.89l4.849-0.792l11.485-6.176l1.557,3.114  l6.074,4.16l5.232-4.721l1.735-6.89l9.213-3.267l18.043,3.931l-0.817-3.803l20.519-3.522l2.221,3.062l11.255-3.037l4.262,1.225  l15.797-4.671l8.805-6.456l0.893-7.758l-8.192,1.608l-5.742-0.995l-2.399-3.675l5.155-0.893L173.634,195.011z" />
-            </svg>
+          <div class="h-100 d-inline-flex align-items-center py-3">
+            <div class="btn-sm-square rounded-circle bg-primary me-2">
+              <small class="far fa-clock text-white"></small>
+            </div>
+            <small>24/7</small>
           </div>
-          <p>UK-based management</p>
-        </div>
-        <div class="trust-item">
-          <div class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              width="50px"
-              height="50px"
-              viewBox="-2 0 20 20"
-              version="1.1">
-              <title>lightning [#1262]</title>
-              <desc>Created with Sketch.</desc>
-              <defs></defs>
-              <g
-                id="Page-1"
-                stroke="none"
-                stroke-width="2"
-                fill="none"
-                fill-rule="evenodd">
-                <g
-                  id="Dribbble-Light-Preview"
-                  transform="translate(-62.000000, -2559.000000)"
-                  fill="#000000">
-                  <g id="icons" transform="translate(56.000000, 160.000000)">
-                    <polygon
-                      id="lightning-[#1262]"
-                      points="14 2419 14 2411 6 2411 14 2399 14 2407 22 2407"></polygon>
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </div>
-          <p>Rapid response teams</p>
         </div>
       </div>
-    </section>
-    <section class="services">
-      <div class="services-container">
-        <!-- Manned Guarding -->
-        <div
-          class="service-card"
-          style="background-image: url(&quot;Assets/MannedGuard.png&quot;)">
-          <div class="card-content">
-            <h3>Manned Guarding</h3>
-            <p class="description">
-              Professional SIA-licensed officers delivering reliable 24/7
-              on-site protection.
-            </p>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h2 class="m-0 text-primary">SwiftPath Protection</h2>
+        <img src="img/Logo.png" class="logo-img" alt="SwiftPath Logo" />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-4 py-lg-0">
+          <a href="index.html" class="nav-item nav-link active">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="service.html" class="nav-item nav-link">Service</a>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <div class="h-100 d-lg-inline-flex align-items-center d-none">
+          <!-- <a
+            class="btn btn-square rounded-circle bg-light text-primary me-2"
+            href=""
+            ><i class="fab fa-facebook-f"></i
+          ></a> -->
+          <!-- <a
+            class="btn btn-square rounded-circle bg-light text-primary me-2"
+            href=""
+            ><i class="fab fa-twitter"></i
+          ></a> -->
+          <a
+            class="btn btn-square rounded-circle bg-light text-primary me-2"
+            href=""
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-square rounded-circle bg-light text-primary me-0"
+            href=""
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+    <style>
+      .logo-img {
+        height: 100px; /* Adjust to fit your navbar height */
+        width: auto; /* Keep original proportions */
+        object-fit: contain; /* Ensure it doesn’t stretch */
+      }
+      @media (max-width: 992px) {
+        /* Bootstrap lg breakpoint */
+        .logo-img {
+          height: 30px;
+        }
+      }
+    </style>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+      <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative hero-item">
+          <img class="img-fluid hero-img" src="img/HeroTemp.png" alt="" />
+          <div class="carousel-overlay"></div>
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInDown mb-4">
+                    Trusted Security Solutions for Your Business
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    SwiftPath Protection provides professional manned guarding,
+                    CCTV monitoring, and advanced security services to keep your
+                    premises safe and secure.
+                  </p>
+                  <a
+                    href="service.html"
+                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft"
+                    >Read More</a
+                  >
+                  <a
+                    href="#quote"
+                    class="btn btn-light rounded-pill py-md-3 px-md-5 animated slideInRight"
+                    >Free Quote</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Hero Section Styling */
+      .hero-item {
+        position: relative;
+        min-height: 600px; /* desktop height */
+        height: 100vh; /* responsive height */
+      }
+
+      .hero-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* fills container without stretching */
+      }
+
+      .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(43, 43, 43, 0.7) 0%,
+          rgba(0, 0, 0, 0.7) 100%
+        );
+        z-index: 1;
+      }
+
+      .carousel-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2; /* above overlay */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Mobile Adjustments */
+      @media (max-width: 991px) {
+        .hero-item {
+          min-height: 400px;
+          height: 60vh;
+        }
+        .display-3 {
+          font-size: 2rem;
+        }
+        .fs-5 {
+          font-size: 1rem;
+        }
+        .btn {
+          padding: 0.5rem 1.5rem;
+        }
+      }
+    </style>
+    <!-- Carousel End -->
+
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Item 1 - Concierge Security -->
+          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+            <div class="h-100 bg-dark p-4 p-xl-5 text-center">
+              <div
+                class="d-flex align-items-center justify-content-center mb-4">
+                <div
+                  class="btn-square rounded-circle icon-hover"
+                  style="width: 64px; height: 64px">
+                  <img
+                    class="img-fluid"
+                    src="img/icon/res-icon.png"
+                    alt="Concierge Security Icon" />
+                </div>
+              </div>
+              <h5 class="text-white">Concierge Security</h5>
+              <hr class="w-25 mx-auto bg-primary" />
+              <span class="text-secondary">
+                Professional front-of-house security officers who combine safety
+                with customer service. Ideal for residential buildings, offices,
+                and corporate environments.
+              </span>
+            </div>
+          </div>
+
+          <!-- Item 2 - Retail Security -->
+          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+            <div class="h-100 bg-dark p-4 p-xl-5 text-center">
+              <div
+                class="d-flex align-items-center justify-content-center mb-4">
+                <div
+                  class="btn-square rounded-circle icon-hover"
+                  style="width: 64px; height: 64px">
+                  <img
+                    class="img-fluid"
+                    src="img/icon/retail-icon.png"
+                    alt="Retail Security Icon" />
+                </div>
+              </div>
+              <h5 class="text-white">Retail Security</h5>
+              <hr class="w-25 mx-auto bg-primary" />
+              <span class="text-secondary">
+                Visible deterrence, loss prevention, and incident management to
+                protect your staff, customers, and stock in high-footfall retail
+                environments.
+              </span>
+            </div>
+          </div>
+
+          <!-- Item 3 - 24/7 Support -->
+          <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+            <div class="h-100 bg-dark p-4 p-xl-5 text-center">
+              <div
+                class="d-flex align-items-center justify-content-center mb-4">
+                <div
+                  class="btn-square rounded-circle icon-hover"
+                  style="width: 64px; height: 64px">
+                  <img
+                    class="img-fluid"
+                    src="img/icon/24:7-icon.png"
+                    alt="24/7 Support Icon" />
+                </div>
+              </div>
+              <h5 class="text-white">24/7 Support</h5>
+              <hr class="w-25 mx-auto bg-primary" />
+              <span class="text-secondary">
+                Around-the-clock operational support with rapid response
+                capability, ensuring your premises remain protected at all
+                times.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .icon-hover {
+        transition: transform 0.3s ease;
+      }
+
+      .icon-hover:hover {
+        transform: scale(1.2);
+      }
+    </style>
+    <!-- Facts Start -->
+
+    <!-- About Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+      <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+          <div class="col-lg-6 ps-lg-0" style="min-height: 400px">
+            <div class="position-relative h-100">
+              <img
+                class="position-absolute img-fluid w-100 h-100"
+                src="img/Filler-img.png"
+                style="object-fit: cover"
+                alt="" />
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 about-text py-5 wow fadeIn"
+            data-wow-delay="0.5s">
+            <div class="p-lg-5 pe-lg-0">
+              <div
+                class="bg-primary mb-3"
+                style="width: 60px; height: 2px"></div>
+
+              <h1 class="display-5 mb-4">About Us</h1>
+
+              <p class="mb-4">
+                SwiftPath Protection is a UK-based security provider delivering
+                professional, SIA-licensed officers across retail, commercial,
+                and residential environments.
+              </p>
+
+              <p class="mb-4">
+                We focus on reliability, structured management, and visible
+                deterrence to ensure every client receives consistent,
+                accountable, and high-quality protection.
+              </p>
+
+              <p class="mb-0">
+                Our commitment is simple — disciplined personnel, strong
+                operational oversight, and dependable service you can trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center">
+          <div
+            class="bg-primary mb-3 mx-auto"
+            style="width: 60px; height: 2px"></div>
+          <h1 class="display-5 mb-5">Why Choose SwiftPath Protection</h1>
         </div>
 
-        <!-- Concierge / Front-of-House -->
+        <div class="row g-4 service-row">
+          <!-- 1. SIA Licensed -->
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="service-item border h-100 p-5 text-center">
+              <div class="btn-square bg-light rounded-circle mb-4 icon-wrapper">
+                <img
+                  class="img-fluid service-icon"
+                  src="img/icon/icon-1.png"
+                  alt="SIA Licensed Icon" />
+              </div>
+              <h4 class="mb-3">All Officers SIA Licensed</h4>
+              <p class="mb-0 text-secondary">
+                Every officer is fully licensed under the Security Industry
+                Authority (SIA), ensuring full compliance, professionalism, and
+                legal protection.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Strict Vetting -->
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+            <div class="service-item border h-100 p-5 text-center">
+              <div class="btn-square bg-light rounded-circle mb-4 icon-wrapper">
+                <img
+                  class="img-fluid service-icon"
+                  src="img/icon/icon-2.png"
+                  alt="Vetting Icon" />
+              </div>
+              <h4 class="mb-3">Strict Vetting Process</h4>
+              <p class="mb-0 text-secondary">
+                We implement rigorous background checks and structured training
+                to ensure only reliable, high-calibre professionals represent
+                your site.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. UK Based Management -->
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+            <div class="service-item border h-100 p-5 text-center">
+              <div class="btn-square bg-light rounded-circle mb-4 icon-wrapper">
+                <img
+                  class="img-fluid service-icon"
+                  src="img/icon/icon-3.png"
+                  alt="UK Management Icon" />
+              </div>
+              <h4 class="mb-3">UK-Based Management</h4>
+              <p class="mb-0 text-secondary">
+                Local management ensures fast communication, accountability, and
+                hands-on operational oversight for every contract.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Rapid Response -->
+          <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+            <div class="service-item border h-100 p-5 text-center">
+              <div class="btn-square bg-light rounded-circle mb-4 icon-wrapper">
+                <img
+                  class="img-fluid service-icon"
+                  src="img/icon/icon-4.png"
+                  alt="Rapid Response Icon" />
+              </div>
+              <h4 class="mb-3">Rapid Response Teams</h4>
+              <p class="mb-0 text-secondary">
+                Our teams are prepared to respond quickly to incidents, scale
+                operations when required, and maintain continuous protection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* Icon Wrapper */
+      .icon-wrapper {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease;
+      }
+
+      /* Icon image */
+      .service-icon {
+        transition: transform 0.3s ease;
+      }
+
+      /* Scale effect on hover */
+      .service-item:hover .service-icon {
+        transform: scale(1.2);
+      }
+
+      .service-item:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        transform: translateY(-5px);
+        transition: 0.3s ease;
+      }
+    </style>
+    <!-- Service End -->
+
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+      <div class="container feature px-lg-0">
+        <div class="row g-0 mx-lg-0">
+          <div
+            class="col-lg-6 feature-text py-5 wow fadeIn"
+            data-wow-delay="0.5s">
+            <div class="p-lg-5 ps-lg-0">
+              <div
+                class="bg-primary mb-3"
+                style="width: 60px; height: 2px"></div>
+              <h1 class="display-5 mb-5">Our Approach</h1>
+
+              <p class="mb-4 pb-2 text-secondary">
+                At SwiftPath Protection, we combine visible deterrence,
+                proactive monitoring, and responsive management to deliver
+                dependable security solutions tailored to each client’s
+                environment.
+              </p>
+              <div class="row g-4">
+                <div class="col-6">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle"
+                      style="width: 64px; height: 64px">
+                      <img
+                        class="img-fluid"
+                        src="img/icon/visual-icon.png"
+                        alt="Icon" />
+                    </div>
+                    <div class="ms-4">
+                      <p class="text-primary mb-2">Visible</p>
+                      <h5 class="mb-0">Deterrence</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle"
+                      style="width: 64px; height: 64px">
+                      <img
+                        class="img-fluid"
+                        src="img/icon/client-icon.png"
+                        alt="Icon" />
+                    </div>
+                    <div class="ms-4">
+                      <p class="text-primary mb-2">Client-Focused</p>
+                      <h5 class="mb-0">Service</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle"
+                      style="width: 64px; height: 64px">
+                      <img
+                        class="img-fluid"
+                        src="img/icon/monitoring-icon.png"
+                        alt="Icon" />
+                    </div>
+                    <div class="ms-4">
+                      <p class="text-primary mb-2">Proactive</p>
+                      <h5 class="mb-0">Monitoring</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle"
+                      style="width: 64px; height: 64px">
+                      <img
+                        class="img-fluid"
+                        src="img/icon/clock-icon.png"
+                        alt="Icon" />
+                    </div>
+                    <div class="ms-4">
+                      <p class="text-primary mb-2">24/7</p>
+                      <h5 class="mb-0">Operational Oversight</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pe-lg-0" style="min-height: 400px">
+            <div class="position-relative h-100">
+              <img
+                class="position-absolute img-fluid w-100 h-100"
+                src="img/feature.jpg"
+                style="object-fit: cover"
+                alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Projects Start -->
+    <section class="who-we-work-with py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Who We Work With</h2>
+        <div class="row justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="client-logo">
+              <img src="img/Pret.png" alt="Pret A Manger" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+        <p class="mt-3 text-muted">
+          Trusted by leading franchises and businesses
+        </p>
+      </div>
+    </section>
+    <style>
+      .client-logo {
+        transition: transform 0.3s ease;
+      }
+
+      .client-logo:hover {
+        transform: scale(1.1);
+      }
+    </style>
+    <!-- Projects End -->
+
+    <!-- Quote Start -->
+    <div id="quote" class="container-fluid bg-light overflow-hidden my-5 px-0">
+      <div class="row justify-content-center mx-0">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div
+            class="quote-text py-5 wow fadeIn d-flex flex-column align-items-center">
+            <div class="p-4 text-center w-100">
+              <div
+                class="bg-primary mb-3 mx-auto"
+                style="width: 60px; height: 2px"></div>
+              <h1 class="display-5 mb-4">Get Your Free Quote Today</h1>
+              <p class="mb-4 pb-2 text-secondary">
+                Fill in the details below and our team will provide a tailored
+                security solution for your business. All our officers are fully
+                SIA licensed, and we ensure rapid, professional, and reliable
+                service.
+              </p>
+
+              <!-- Web3Form -->
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                id="quoteForm"
+                class="w-100">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="3f647ce5-6879-4a9f-af96-d2f0b6326f95" />
+
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control border-0"
+                      placeholder="Your Name"
+                      style="height: 55px"
+                      required />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control border-0"
+                      placeholder="Your Email"
+                      style="height: 55px"
+                      required />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      name="mobile"
+                      class="form-control border-0"
+                      placeholder="Your Mobile"
+                      style="height: 55px" />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <select
+                      name="service"
+                      class="form-select border-0"
+                      style="height: 55px"
+                      required>
+                      <option selected disabled>Select A Service</option>
+                      <option value="manned_guarding">Manned Guarding</option>
+                      <option value="cctv_monitoring">CCTV Monitoring</option>
+                      <option value="rapid_response">Rapid Response</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      name="message"
+                      class="form-control border-0"
+                      placeholder="Special Note / Site Details"
+                      rows="4"
+                      required></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">
+                      Request Free Quote
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <small class="text-muted d-block mt-3">
+                We respect your privacy. Your information will only be used to
+                provide your quote.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      /* Quote Form */
+      .quote-text h1 {
+        color: #2b2b2b; /* Hero text style */
+      }
+
+      .quote-text p {
+        color: #7d7d7d; /* Secondary text */
+      }
+
+      /* Form Inputs */
+      .quote-text .form-control,
+      .quote-text .form-select,
+      .quote-text textarea {
+        background: #f5f5f5;
+        border-radius: 6px;
+        padding: 0 15px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .quote-text .form-control:focus,
+      .quote-text .form-select:focus,
+      .quote-text textarea:focus {
+        box-shadow: 0 0 8px rgba(0, 133, 230, 0.4);
+        transform: scale(1.02);
+      }
+
+      /* Submit Button Hover */
+      .quote-text .btn-primary {
+        background-color: #0085e6;
+        color: #ffffff;
+        font-weight: 600;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .quote-text .btn-primary:hover {
+        background-color: #006bb3;
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 133, 230, 0.4);
+      }
+    </style>
+    <!-- Quote End -->
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div
+            class="bg-primary mb-3 mx-auto"
+            style="width: 60px; height: 2px"></div>
+          <h1 class="display-5 mb-5">Team Members</h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="team-item">
+              <div class="overflow-hidden position-relative">
+                <img class="img-fluid" src="img/team-1.jpg" alt="" />
+                <div class="team-social">
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Full Name</h5>
+                <span class="text-primary">Designation</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="team-item">
+              <div class="overflow-hidden position-relative">
+                <img class="img-fluid" src="img/team-2.jpg" alt="" />
+                <div class="team-social">
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Full Name</h5>
+                <span class="text-primary">Designation</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="team-item">
+              <div class="overflow-hidden position-relative">
+                <img class="img-fluid" src="img/team-3.jpg" alt="" />
+                <div class="team-social">
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Full Name</h5>
+                <span class="text-primary">Designation</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="team-item">
+              <div class="overflow-hidden position-relative">
+                <img class="img-fluid" src="img/team-4.jpg" alt="" />
+                <div class="team-social">
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square btn-dark rounded-circle m-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="text-center p-4">
+                <h5 class="mb-0">Full Name</h5>
+                <span class="text-primary">Designation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div
+            class="bg-primary mb-3 mx-auto"
+            style="width: 60px; height: 2px"></div>
+          <h1 class="display-5 mb-5">Testimonial</h1>
+        </div>
         <div
-          class="service-card"
-          style="background-image: url(&quot;Assets/Concierge.png&quot;)">
-          <div class="card-content">
-            <h3>Concierge / Front-of-House</h3>
-            <p class="description">
-              Discreet, professional personnel combining security with reception
+          class="owl-carousel testimonial-carousel wow fadeInUp"
+          data-wow-delay="0.1s">
+          <div
+            class="testimonial-item text-center"
+            data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
+            <p class="fs-5">
+              Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo
+              duo labore sed sed. Magna ut diam sit et amet stet eos sed clita
+              erat magna elitr erat sit sit erat at rebum justo sea clita.
+            </p>
+            <h4>Client Name</h4>
+            <span class="text-primary">Profession</span>
+          </div>
+          <div
+            class="testimonial-item text-center"
+            data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
+            <p class="fs-5">
+              Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo
+              duo labore sed sed. Magna ut diam sit et amet stet eos sed clita
+              erat magna elitr erat sit sit erat at rebum justo sea clita.
+            </p>
+            <h4>Client Name</h4>
+            <span class="text-primary">Profession</span>
+          </div>
+          <div
+            class="testimonial-item text-center"
+            data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
+            <p class="fs-5">
+              Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo
+              duo labore sed sed. Magna ut diam sit et amet stet eos sed clita
+              erat magna elitr erat sit sit erat at rebum justo sea clita.
+            </p>
+            <h4>Client Name</h4>
+            <span class="text-primary">Profession</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="container-xxl py-5" id="testimonial-section">
+      <div class="container text-center">
+        <div
+          class="bg-primary mb-3 mx-auto"
+          style="width: 60px; height: 2px"></div>
+        <h1 class="display-5 mb-5">Testimonial</h1>
+
+        <!-- Placeholder / Coming Soon -->
+        <div id="testimonial-loading">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-3">Coming Soon...</p>
+        </div>
+
+        <!-- Carousel (empty / hidden) -->
+        <div id="testimonial-content" style="display: none">
+          <!-- Owl-carousel would go here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid bg-dark text-secondary footer mt-5 py-5 wow fadeIn"
+      data-wow-delay="0.1s">
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Address</h5>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>167-169 Great Portland
+              Street, London, England, W1W 5PF
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+44 7465 989610
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>info@swiftpath.uk
+            </p>
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-square btn-outline-secondary rounded-circle me-2"
+                href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-secondary rounded-circle me-2"
+                href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-secondary rounded-circle me-2"
+                href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-square btn-outline-secondary rounded-circle me-2"
+                href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Legal & Compliance</h5>
+            <a class="btn btn-link" href="Assets/Anti-Bribery-Policy.pdf"
+              >Anti-Bribery Policy</a
+            >
+            <a class="btn btn-link" href="Assets/Anti-Slavery-Policy.pdf"
+              >Anti-Slavery Policy</a
+            >
+            <a class="btn btn-link" href="Assets/Insurance.pdf"
+              >Public Liability Insurance</a
+            >
+            <a
+              class="btn btn-link"
+              href="https://find-and-update.company-information.service.gov.uk/company/15985675"
+              >Companies House</a
+            >
+            <a class="btn btn-link" href="Privacy.html">Privacy Policy</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Quick Links</h5>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="contact.html">Contact Us</a>
+            <a class="btn btn-link" href="service.html">Our Services</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Newsletter</h5>
+            <p>
+              Join our newsletter for professional security advice, compliance
+              updates, and the latest developments in manned guarding and patrol
               services.
             </p>
-          </div>
-        </div>
-
-        <!-- Construction Site Security -->
-        <div
-          class="service-card"
-          style="background-image: url(&quot;Assets/construction.png&quot;)">
-          <div class="card-content">
-            <h3>Construction Site Security</h3>
-            <p class="description">
-              Safeguarding your site, equipment, and materials with trained,
-              vigilant officers.
-            </p>
-          </div>
-        </div>
-
-        <!-- Key Holding & Alarm Response -->
-        <div
-          class="service-card"
-          style="background-image: url(&quot;Assets/key-holding.png&quot;)">
-          <div class="card-content">
-            <h3>Key Holding & Alarm Response</h3>
-            <p class="description">
-              Fast response to alarms and secure property monitoring, even when
-              you're off-site.
-            </p>
+            <div class="position-relative w-100">
+              <input
+                class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email" />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                SignUp
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- Footer End -->
 
-    <section class="about">
-      <div class="about-content">
-        <h2>About Us</h2>
-        <p>
-          SwiftPath Protection is a UK-based security company providing
-          reliable, professional manned guarding and front-of-house services.
-          Our team is fully SIA-licensed, vetted, and trained to deliver
-          proactive security solutions tailored to your business needs.
-        </p>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <h2>Trusted By Our Partners</h2>
-      <div class="testimonial-container">
-        <p>
-          Client reviews coming soon. Check back here for feedback from our
-          partners<span class="dots"></span>
-        </p>
-      </div>
-    </section>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <!-- Company Info / Logo -->
-        <div class="footer-info">
-          <h3>SwiftPath Protection</h3>
-          <img src="Assets/Logo.png" alt="" />
-          <p>Professional SIA-licensed security services across the UK.</p>
-        </div>
-
-        <!-- Legal / Policy Links -->
-        <div class="footer-links">
-          <h4>Legal & Compliance</h4>
-          <ul>
-            <li>
-              <a href="Assets/Anti-Bribery-Policy.pdf" target="_blank"
-                >Anti-Bribery Policy</a
-              >
-            </li>
-            <li>
-              <a href="Assets/Insurance.pdf" target="_blank"
-                >Public Liability Document</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://find-and-update.company-information.service.gov.uk/company/15985675"
-                target="_blank"
-                >Companies House</a
-              >
-            </li>
-            <li>
-              <a href="Assets/Anti-Slavery-Policy.pdf" target="_blank"
-                >Anti-Slavery Policy</a
-              >
-            </li>
-            <li><a href="Privacy.html">Privacy Policy</a></li>
-          </ul>
+    <!-- Copyright Start -->
+    <div class="container-fluid py-4" style="background: #000000">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="#">SwiftPath</a>, All Right
+            Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By
+            <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+          </div>
         </div>
       </div>
+    </div>
+    <!-- Copyright End -->
 
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <p>&copy; 2026 SwiftPath Protection. All rights reserved.</p>
-      </div>
-    </footer>
+    <!-- Back to Top -->
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
   </body>
-  <!-- <script src="./js/layout.js"></script> -->
-
-  <script src="script.js"></script>
 </html>
-
-<!-- figure out why click dropdoiwn isntr working
- -->
